@@ -1,0 +1,138 @@
+    <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background: linear-gradient(120deg, #b200e9, rgb(255, 0, 212), #b32121);
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .center {
+            background: white;
+            margin: auto;
+            padding: 30px;
+            text-align: center;
+            border-radius: 15px;
+            width: 550px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .center h1 {
+            text-align: center;
+            font-size: 35px;
+            text-shadow: 100%;
+            padding: 10px;
+            cursor: default;
+        }
+
+        .center form {
+            box-sizing: border-box;
+        }
+
+        form .txt_field {
+            position: relative;
+            border-bottom: 2px solid rgb(95, 95, 95);
+            margin: 50px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .txt_field input {
+            height: 30px;
+            font-size: 16px;
+            outline: none;
+            border: none;
+        }
+
+        .txt_field label {
+            position: absolute;
+            left: 5px;
+            top: -28px;
+            color: rgb(0, 0, 0);
+            pointer-events: none;
+            font-size: 20px;
+        }
+
+        .pass {
+            cursor: pointer;
+            text-align: right;
+            margin: 10px;
+        }
+
+        .pass:hover {
+            text-decoration: underline;
+        }
+
+        input[type="submit"] {
+            width: 40%;
+            height: 50px;
+            background: linear-gradient(120deg, #b701ff, rgb(245, 110, 222), #d60606);
+            border-radius: 25px;
+            font-size: 18px;
+            color: rgb(0, 0, 0);
+            font-weight: 700;
+            cursor: pointer;
+            outline: none;
+        }
+
+        input[type="submit"]:hover {
+            border: 3px solid white;
+            background: linear-gradient(120deg, #7800e9, rgb(252, 25, 214), #cc0404);
+            color: white;
+        }
+
+        .signup_link {
+            margin: 30px 0;
+            text-align: center;
+            font-size: 18px;
+            color: rgb(95, 95, 95);
+            cursor:default
+        }
+
+        .social_icons {
+            margin: 10px;
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="center">
+        <h1>Login</h1>
+        <form method="post">
+            <div class="txt_field">
+                <label>Username</label>
+                <span><input type="text" required placeholder="Type your username"></span>
+            </div>
+            <div class="txt_field">
+                <label>Password</label>
+                <span><input type="password" required placeholder="Type your password"></span>
+            </div>
+            <div class="pass">Forgot Password?</div>
+            <input type="submit" value="Login">
+            <div class="signup_link">
+                Or sign up using <br>
+                <div class="social_icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-google"></i></a>
+                </div>
+            </div>
+
+        </form>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+</body>
+
+</html>
