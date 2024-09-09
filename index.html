@@ -1,10 +1,12 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login page</title>
+    <title>Login Page</title>
+    <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
     <style>
         body {
             margin: 0;
@@ -97,7 +99,7 @@
             text-align: center;
             font-size: 18px;
             color: rgb(95, 95, 95);
-            cursor:default
+            cursor: default;
         }
 
         .social_icons {
@@ -124,14 +126,22 @@
             <div class="signup_link">
                 Or sign up using <br>
                 <div class="social_icons">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-google"></i></a>
+                    <div class="g-signin2" data-onsuccess="onSignIn"></div>
                 </div>
             </div>
-
         </form>
     </div>
+    <script>
+        function onSignIn(googleUser) {
+            var profile = googleUser.getBasicProfile();
+            console.log('ID: ' + profile.getId());
+            console.log('Name: ' + profile.getName());
+            console.log('Image URL: ' + profile.getImageUrl());
+            console.log('Email: ' + profile.getEmail());
+            var id_token = googleUser.getAuthResponse().id_token;
+            console.log('ID Token: ' + id_token);
+        }
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
 </body>
 
